@@ -61,7 +61,7 @@ def parse_argv(argv):
 
 def read_plain_config_file(file_name):
     
-    config = configparser.ConfigParser(strict=False)
+    config = configparser.RawConfigParser(strict=False)
     with open(file_name) as stream:
         config.read_string("[top]\n" + stream.read())  
     
